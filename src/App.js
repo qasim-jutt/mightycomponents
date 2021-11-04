@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import SlideToggle from "./components/slideToggle";
 
 function App() {
+  const [toggle, settoggle] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <button onClick={() => (toggle ? settoggle(false) : settoggle(true))}>
+        toggle
+      </button>
+      <SlideToggle collapsed={toggle}>
+        <div>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
+          aspernatur dicta molestias, officia nulla suscipit, asperiores
+          praesentium tempore magni maiores impedit voluptatum esse hic minima!
+          Odit itaque quis consequatur mollitia. Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Cumque aspernatur dicta molestias,
+          officia nulla suscipit, asperiores praesentium tempore magni maiores
+          impedit voluptatum esse hic minima! Odit itaque quis consequatur
+          mollitia. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Cumque aspernatur dicta molestias, officia nulla suscipit, asperiores
+          praesentium tempore magni maiores impedit voluptatum esse hic minima!
+          Odit itaque quis consequatur mollitia. Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Cumque aspernatur dicta molestias,
+          officia nulla suscipit, asperiores praesentium tempore magni maiores
+          impedit voluptatum esse hic minima! Odit itaque quis consequatur
+          mollitia. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Cumque aspernatur dicta molestias, officia nulla suscipit, asperiores
+          praesentium tempore magni maiores impedit voluptatum esse hic minima!
+          Odit itaque quis consequatur mollitia. Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Cumque aspernatur dicta molestias,
+          officia nulla suscipit, asperiores praesentium tempore magni maiores
+          impedit voluptatum esse hic minima! Odit itaque quis consequatur
+          mollitia.
+        </div>
+      </SlideToggle>
+    </React.Fragment>
   );
 }
 

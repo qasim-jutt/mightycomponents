@@ -1,15 +1,21 @@
-import React, { useState } from "react";
-import SlideToggle from "./components/slideToggle";
+import React, { useRef } from "react";
+import {slideUp, slideDown, slideToggle} from "./components/slideToggle";
+import './app.css'
 
 function App() {
-  const [toggle, settoggle] = useState(false);
+  const target = useRef();
   return (
     <React.Fragment>
-      <button onClick={() => (toggle ? settoggle(false) : settoggle(true))}>
+      <button onClick={() => slideUp(target.current)}>
+        hide
+      </button>
+      <button onClick={() => slideDown(target.current)}>
+        show
+      </button>
+      <button onClick={() => slideToggle(target.current)}>
         toggle
       </button>
-      <SlideToggle collapsed={toggle}>
-        <div>
+        <div className='box' ref={target}>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
           aspernatur dicta molestias, officia nulla suscipit, asperiores
           praesentium tempore magni maiores impedit voluptatum esse hic minima!
@@ -33,7 +39,6 @@ function App() {
           impedit voluptatum esse hic minima! Odit itaque quis consequatur
           mollitia.
         </div>
-      </SlideToggle>
     </React.Fragment>
   );
 }

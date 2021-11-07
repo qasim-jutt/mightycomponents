@@ -1,8 +1,15 @@
-.box{
-    border: 1px solid;
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px;
-    box-shadow: 0 0 12px 0 gray;
-    display: none;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.mightyContainer{
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
 }

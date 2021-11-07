@@ -1,0 +1,71 @@
+.mightySelect{
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.mightySelect > button{
+    width: 100%;
+    border: 1px solid rgba(34, 41, 56, 0.164);
+    outline: none;
+    background-color: rgb(247, 249, 255);
+    border-radius: 5px;
+    padding: 15px 40px 15px 15px;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s all;
+    position: relative;
+}
+
+.mightySelect > button:hover{
+    background-color: rgb(232, 236, 247);
+}
+
+.mightySelect > button:focus{
+    border-color: gray;
+}
+
+.mightySelect > button::after{
+    content: "";
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23303C42' d='M12,18.000248c-0.1245117,0-0.2490234-0.0463867-0.3457031-0.1386719l-11.5-10.999999 c-0.1992188-0.190918-0.206543-0.5073242-0.015625-0.7070313c0.1904297-0.199707,0.5068359-0.2075195,0.7070313-0.015625 L12,16.8083534L23.1542969,6.1389208c0.2006836-0.190918,0.5166016-0.1831055,0.7070313,0.015625 c0.190918,0.199707,0.1835938,0.5161133-0.015625,0.7070313l-11.5,10.999999 C12.2490234,17.9538612,12.1245117,18.000248,12,18.000248z'%3E%3C/path%3E%3ClinearGradient id='jaYRY7afA9XORrAGT5U-za' x1='1.021' x2='20.82' y1='4.199' y2='13.432' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23fff' stop-opacity='.2'%3E%3C/stop%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'%3E%3C/stop%3E%3C/linearGradient%3E%3Cpath fill='url(%23jaYRY7afA9XORrAGT5U-za)' d='M12,18.000248c-0.1245117,0-0.2490234-0.0463867-0.3457031-0.1386719l-11.5-10.999999 c-0.1992188-0.190918-0.206543-0.5073242-0.015625-0.7070313c0.1904297-0.199707,0.5068359-0.2075195,0.7070313-0.015625 L12,16.8083534L23.1542969,6.1389208c0.2006836-0.190918,0.5166016-0.1831055,0.7070313,0.015625 c0.190918,0.199707,0.1835938,0.5161133-0.015625,0.7070313l-11.5,10.999999 C12.2490234,17.9538612,12.1245117,18.000248,12,18.000248z'%3E%3C/path%3E%3C/svg%3E") center no-repeat;
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.mightySelectDropdown{
+    list-style: none;
+    border: 1px solid gray;
+    background-color: rgb(245, 247, 250);
+    margin-top: 5px;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.mightySelectDropdown > li{
+    padding: 15px 15px 15px 15px;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.mightySelectDropdown > li:hover{
+    background-color: rgb(228, 228, 228);
+}
+
+.mightySelectDropdown > li.active{
+    background-color: rgb(228, 228, 228);
+}
+
+.mightySelectDropdown > li:not(:last-child){
+    border-bottom: 1px solid rgba(128, 128, 128, 0.096);
+}

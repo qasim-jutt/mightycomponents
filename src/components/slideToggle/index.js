@@ -16,7 +16,7 @@ function slideDown(el, duration, callback) {
 
 function _s(el, duration, callback, isDown) {
 
-  if (typeof duration === 'undefined') duration = 400;
+  if (typeof duration === 'undefined') duration = 300;
   if (typeof isDown === 'undefined') isDown = false;
 
   el.style.overflow = "hidden";

@@ -1,11 +1,11 @@
 import React from "react";
 import "./app.css";
-import CustomSelect from './components/customSelect'
+import CodeEditor from './components/codeEditor'
 
 function App() {
   return (
     <div className='mightyContainer'>
-      <CustomSelect />
+      <CodeEditor />
     </div>
   );
 }
